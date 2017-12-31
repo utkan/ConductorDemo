@@ -76,6 +76,14 @@ View fab;
 
     @NonNull
     @Override
+    protected View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
+        final View view = inflateView(inflater, container);
+        onViewBound(view);
+        return view;
+    }
+
+    @NonNull
+    @Override
     protected View inflateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
         return inflater.inflate(R.layout.controller_home, container, false);
     }

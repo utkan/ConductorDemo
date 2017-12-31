@@ -56,6 +56,14 @@ public class CityDetailController extends BaseController {
 
     @NonNull
     @Override
+    protected View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
+        final View view = inflateView(inflater, container);
+        onViewBound(view);
+        return view;
+    }
+
+    @NonNull
+    @Override
     protected View inflateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
         return inflater.inflate(R.layout.controller_city_detail, container, false);
     }

@@ -37,6 +37,12 @@ public class DialogController extends BaseController {
         super(args);
     }
 
+    @NonNull
+    @Override
+    protected View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
+        return null;
+    }
+
     @Override
     protected View inflateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
         return inflater.inflate(R.layout.controller_dialog, container, false);

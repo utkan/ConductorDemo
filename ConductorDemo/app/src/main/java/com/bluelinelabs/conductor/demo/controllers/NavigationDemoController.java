@@ -16,9 +16,6 @@ import com.bluelinelabs.conductor.demo.controllers.base.BaseController;
 import com.bluelinelabs.conductor.demo.util.BundleBuilder;
 import com.bluelinelabs.conductor.demo.util.ColorUtil;
 
-////import butterknife.BindView;
-//import butterknife.OnClick;
-
 public class NavigationDemoController extends BaseController {
 
     public enum DisplayUpMode {
@@ -58,6 +55,15 @@ public class NavigationDemoController extends BaseController {
         super(args);
         index = args.getInt(KEY_INDEX);
         displayUpMode = DisplayUpMode.values()[args.getInt(KEY_DISPLAY_UP_MODE)];
+    }
+
+    @NonNull
+    @Override
+    protected View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
+        View view = inflateView(inflater, container);
+//        unbinder = //ButterKnife.bind(this, view);
+        onViewBound(view);
+        return view;
     }
 
     @NonNull

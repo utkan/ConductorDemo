@@ -42,4 +42,11 @@ public class MultipleChildRouterController extends BaseController {
         return "Child Router Demo";
     }
 
+    @NonNull
+    @Override
+    protected View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
+        final View view = inflateView(inflater, container);
+        onViewBound(view);
+        return view;
+    }
 }

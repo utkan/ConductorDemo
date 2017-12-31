@@ -105,7 +105,7 @@ public class RxLifecycleController extends RxController {
 
         Log.i(TAG, "onAttach() called");
 
-        (((ActionBarProvider)getActivity()).getSupportActionBar()).setTitle("RxLifecycle Demo");
+        (((ActionBarProvider)getActivity()).supportActionBar()).setTitle("RxLifecycle Demo");
 
         Observable.interval(1, TimeUnit.SECONDS)
                 .doOnUnsubscribe(new Action0() {

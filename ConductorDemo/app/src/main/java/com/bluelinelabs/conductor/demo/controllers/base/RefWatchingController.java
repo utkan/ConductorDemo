@@ -3,10 +3,11 @@ package com.bluelinelabs.conductor.demo.controllers.base;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
+import com.bluelinelabs.conductor.Controller;
 import com.bluelinelabs.conductor.ControllerChangeHandler;
 import com.bluelinelabs.conductor.ControllerChangeType;
 
-public abstract class RefWatchingController extends ButterKnifeController {
+public abstract class RefWatchingController extends Controller {
 
     protected RefWatchingController() { }
     protected RefWatchingController(Bundle args) {

@@ -106,7 +106,7 @@ public class ArchLifecycleController extends LifecycleController {
 
         Log.i(TAG, "onAttach() called");
 
-        (((ActionBarProvider) getActivity()).getSupportActionBar()).setTitle("Arch Components Lifecycle Demo");
+        (((ActionBarProvider) getActivity()).supportActionBar()).setTitle("Arch Components Lifecycle Demo");
     }
 
     @Override

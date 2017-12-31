@@ -238,5 +238,4 @@ public class ElasticDragDismissFrameLayout extends FrameLayout implements Nested
             }
         }
     }
-
 }

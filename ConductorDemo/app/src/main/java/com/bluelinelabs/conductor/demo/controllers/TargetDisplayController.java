@@ -94,6 +94,14 @@ public class TargetDisplayController extends BaseController implements TargetTit
         setImageView();
     }
 
+    @NonNull
+    @Override
+    protected View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
+        final View view = inflateView(inflater, container);
+        onViewBound(view);
+        return view;
+    }
+
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);

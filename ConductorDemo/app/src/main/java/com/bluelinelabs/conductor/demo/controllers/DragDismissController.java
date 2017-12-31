@@ -35,6 +35,14 @@ public class DragDismissController extends BaseController {
         ((ElasticDragDismissFrameLayout)view).addListener(dragDismissListener);
     }
 
+    @NonNull
+    @Override
+    protected View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
+        final View view = inflateView(inflater, container);
+        onViewBound(view);
+        return view;
+    }
+
     @Override
     protected void onDestroyView(@NonNull View view) {
         super.onDestroyView(view);

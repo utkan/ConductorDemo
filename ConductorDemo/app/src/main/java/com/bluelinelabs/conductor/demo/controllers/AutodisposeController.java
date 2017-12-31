@@ -106,7 +106,7 @@ view.findViewById(R.id.btn_next_retain_view).setOnClickListener(new View.OnClick
 
         Log.i(TAG, "onAttach() called");
 
-        (((ActionBarProvider) getActivity()).getSupportActionBar()).setTitle("Autodispose Demo");
+        (((ActionBarProvider) getActivity()).supportActionBar()).setTitle("Autodispose Demo");
 
         Observable.interval(1, TimeUnit.SECONDS)
                 .doOnDispose(new Action() {

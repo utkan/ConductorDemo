@@ -30,6 +30,24 @@ public class ParentController extends BaseController {
         return inflater.inflate(R.layout.controller_parent, container, false);
     }
 
+    @NonNull
+    @Override
+    protected View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
+        View view = inflateView(inflater, container);
+//        unbinder = //ButterKnife.bind(this, view);
+        onViewBound(view);
+        return view;
+    }
+
+    protected void onViewBound(@NonNull View view) { }
+
+
+//    @NonNull
+//    @Override
+//    protected View onCreateView(@NonNull LayoutInflater inflater, @NonNull ViewGroup container) {
+//        return null;
+//    }
+
     @Override
     protected void onChangeEnded(@NonNull ControllerChangeHandler changeHandler, @NonNull ControllerChangeType changeType) {
         super.onChangeEnded(changeHandler, changeType);
