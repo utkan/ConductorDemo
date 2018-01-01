@@ -288,7 +288,7 @@ object AnimUtils {
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     abstract class TransitionEndListener : Transition.TransitionListener {
-        abstract fun onTransitionCompleted(transition: Transition)
+        abstract fun onTransitionCompleted(transition: Transition?)
 
         override fun onTransitionStart(transition: Transition) {
 
