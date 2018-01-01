@@ -25,10 +25,6 @@ import com.bluelinelabs.conductor.demo.changehandler.FlipChangeHandler;
 import com.bluelinelabs.conductor.demo.controllers.base.BaseController;
 import com.bluelinelabs.conductor.demo.util.BundleBuilder;
 
-//import butterknife.BindView;
-//import butterknife.ButterKnife;
-//import butterknife.OnClick;
-
 public class TransitionDemoController extends BaseController {
 
     private static final String KEY_INDEX = "TransitionDemoController.index";
@@ -128,7 +124,6 @@ public class TransitionDemoController extends BaseController {
         return "Transition Demos";
     }
 
-//    @OnClick(R.id.btn_next)
     void onNextClicked() {
         final int nextIndex = transitionDemo.ordinal() + 1;
 

@@ -36,10 +36,6 @@ import com.bluelinelabs.conductor.demo.changehandler.FabToDialogTransitionChange
 import com.bluelinelabs.conductor.demo.controllers.NavigationDemoController.DisplayUpMode;
 import com.bluelinelabs.conductor.demo.controllers.base.BaseController;
 
-//import butterknife.BindView;
-//import butterknife.ButterKnife;
-//import butterknife.OnClick;
-
 public class HomeController extends BaseController {
 
     private enum DemoModel {
