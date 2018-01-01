@@ -7,7 +7,12 @@ import android.os.Build
 import android.view.View
 import android.view.ViewGroup
 
-class CircularRevealChangeHandlerCompat(fromView: View, containerView: View) : CircularRevealChangeHandler(fromView, containerView) {
+class CircularRevealChangeHandlerCompat : CircularRevealChangeHandler {
+
+    constructor()
+
+    constructor(fromView: View, containerView: View) : super(fromView, containerView)
+
     override fun getAnimator(container: ViewGroup, from: View?, to: View?, isPush: Boolean, toAddedToContainer: Boolean): Animator {
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             super.getAnimator(container, from, to, isPush, toAddedToContainer)

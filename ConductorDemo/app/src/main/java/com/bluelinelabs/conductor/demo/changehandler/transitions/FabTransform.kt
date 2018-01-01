@@ -71,9 +71,12 @@ class FabTransform(@param:ColorInt private val color: Int, @param:DrawableRes pr
     }
 
     override fun createAnimator(sceneRoot: ViewGroup,
-                                startValues: TransitionValues,
-                                endValues: TransitionValues): Animator {
+                                startValues: TransitionValues?,
+                                endValues: TransitionValues?): Animator? {
 
+        if (startValues == null || endValues == null) {
+            return null
+        }
         val startBounds = startValues.values[PROP_BOUNDS] as Rect
         val endBounds = endValues.values[PROP_BOUNDS] as Rect
 
