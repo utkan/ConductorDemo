@@ -55,7 +55,7 @@ public class ParentController extends BaseController {
         final Router childRouter = getChildRouter(container).setPopsLastView(true);
 
         if (!childRouter.hasRootController()) {
-            ChildController childController = new ChildController("Child Controller #" + index, ColorUtil.getMaterialColor(getResources(), index), false);
+            ChildController childController = new ChildController("Child Controller #" + index, ColorUtil.INSTANCE.getMaterialColor(getResources(), index), false);
 
             childController.addLifecycleListener(new LifecycleListener() {
                 @Override

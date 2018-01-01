@@ -83,7 +83,7 @@ class FabTransform(@param:ColorInt private val color: Int, @param:DrawableRes pr
         val fromFab = endBounds.width() > startBounds.width()
         val view = endValues.view
         val dialogBounds = if (fromFab) endBounds else startBounds
-        val fastOutSlowInInterpolator = AnimUtils.getFastOutSlowInInterpolator()
+        val fastOutSlowInInterpolator = AnimUtils.fastOutSlowInInterpolator
         val duration = duration
         val halfDuration = duration / 2
         val twoThirdsDuration = duration * 2 / 3
@@ -148,14 +148,14 @@ class FabTransform(@param:ColorInt private val color: Int, @param:DrawableRes pr
                     view.height / 2,
                     (startBounds.width() / 2).toFloat(),
                     Math.hypot((endBounds.width() / 2).toDouble(), (endBounds.height() / 2).toDouble()).toFloat())
-            circularReveal.interpolator = AnimUtils.getFastOutLinearInInterpolator()
+            circularReveal.interpolator = AnimUtils.fastOutLinearInInterpolator
         } else {
             circularReveal = ViewAnimationUtils.createCircularReveal(view,
                     view.width / 2,
                     view.height / 2,
                     Math.hypot((startBounds.width() / 2).toDouble(), (startBounds.height() / 2).toDouble()).toFloat(),
                     (endBounds.width() / 2).toFloat())
-            circularReveal.interpolator = AnimUtils.getLinearOutSlowInInterpolator()
+            circularReveal.interpolator = AnimUtils.linearOutSlowInInterpolator
 
             // Persist the end clip i.e. stay at FAB size after the reveal has run
             circularReveal.addListener(object : AnimatorListenerAdapter() {
